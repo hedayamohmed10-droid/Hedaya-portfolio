@@ -1,0 +1,582 @@
+```css
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f5ff;
+    color: #29223d;
+    text-align: center;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    width: 90%;
+    margin: 20px auto;
+    padding: 16px 25px;
+
+    background-color: #6c4ab6;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 8px 20px rgba(108, 74, 182, 0.25);
+
+    transition: 0.4s;
+}
+
+nav:hover {
+    background-color: #8b5cf6;
+}
+
+nav h2 {
+    color: white;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    transition: 0.4s;
+}
+
+nav ul li a:hover {
+    background-color: #f472b6;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   About / Hero
+========================= */
+
+.hero {
+    padding: 60px 20px 40px;
+}
+
+
+/* الصورة الدائرية */
+
+.hero img {
+    width: 170px;
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 0 0 4px #8b5cf6,
+        0 12px 30px rgba(108, 74, 182, 0.3);
+
+    transition: 0.5s;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+
+/* حركة الصورة */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.hero img:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 0 6px #f472b6,
+        0 15px 35px rgba(244, 114, 182, 0.3);
+}
+
+
+/* =========================
+   Text
+========================= */
+
+.hero h1 {
+    margin-top: 25px;
+
+    font-size: 42px;
+
+    color: #5b3a9d;
+}
+
+.hero h1 span {
+    color: #e0529c;
+}
+
+.hero p {
+    margin: 15px auto;
+
+    max-width: 650px;
+
+    line-height: 1.8;
+
+    color: #222;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   PAGE 1 - SECTION TITLES
+========================= */
+
+/* كل عناوين الأقسام في الصفحة الأولى */
+
+main section h2 {
+    color: #8b3fb5;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+
+/* الخط الموجود تحت العنوان */
+
+main section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 4px;
+
+    background-color: #e0529c;
+
+    border-radius: 10px;
+
+    margin: 8px auto;
+}
+
+
+/* =========================
+   PAGE 1 - NORMAL TEXT
+========================= */
+
+/* كل الكلام العادي أسود */
+
+main section p {
+    color: #222;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PAGE 1 - LISTS
+========================= */
+
+/* نخلي القائمة قريبة من الكلام */
+
+main section ul,
+main section ol {
+    display: inline-block;
+
+    text-align: left;
+
+    margin: 5px auto;
+
+    padding-left: 22px;
+}
+
+
+/* عناصر القائمة */
+
+main section li {
+    color: #222;
+
+    margin-bottom: 7px;
+
+    padding-left: 2px;
+
+    line-height: 1.6;
+
+    transition: 0.3s;
+}
+
+
+/* حركة بسيطة للنقاط والأرقام */
+
+main section li:hover {
+    color: #8b3fb5;
+
+    transform: translateX(4px);
+}
+
+
+/* لون النقاط */
+
+main section ul li::marker {
+    color: #e0529c;
+}
+
+
+/* لون الأرقام */
+
+main section ol li::marker {
+    color: #8b5cf6;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SKILLS TABLE
+========================= */
+
+#skills-table table {
+    margin: 10px auto;
+
+    border-collapse: collapse;
+
+    width: 80%;
+}
+
+#skills-table th {
+    background-color: #6c4ab6;
+
+    color: white;
+
+    padding: 12px;
+}
+
+#skills-table td {
+    background-color: white;
+
+    color: #222;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+}
+
+#skills-table tr:hover td {
+    background-color: #fce7f3;
+}
+
+
+/* =========================
+   MEDIA
+========================= */
+
+#media iframe {
+    max-width: 100%;
+
+    border: 4px solid #eee5ff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(80, 50, 120, 0.15);
+}
+
+
+/* =========================
+   GITHUB
+========================= */
+
+#github a {
+    display: inline-block;
+
+    padding: 11px 25px;
+
+    background-color: #6c4ab6;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: 0.4s;
+}
+
+#github a:hover {
+    background-color: #e0529c;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 18px rgba(224, 82, 156, 0.3);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    width: 85%;
+
+    margin: 40px auto;
+}
+
+.projects h1 {
+    font-size: 35px;
+
+    color: #5b3a9d;
+
+    margin-bottom: 12px;
+}
+
+.projects>p {
+    color: #222;
+
+    margin-bottom: 35px;
+}
+
+.projects h1::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    background-color: #f472b6;
+
+    margin: 12px auto;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   Project Cards
+========================= */
+
+.project-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    border: 2px solid #eee8ff;
+
+    box-shadow: 0 8px 25px rgba(75, 50, 130, 0.12);
+
+    transition: 0.5s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: #8b5cf6;
+
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #d8c5ff;
+
+    box-shadow:
+        0 15px 35px rgba(108, 74, 182, 0.2);
+}
+
+.project-card:hover::before {
+    background-color: #f472b6;
+}
+
+
+/* =========================
+   Project Images
+========================= */
+
+.project-card img {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 18px;
+
+    transition: 0.5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   Project Text
+========================= */
+
+.project-info h2 {
+    color: #6c4ab6;
+
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    color: #222;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.project-info a {
+    display: inline-block;
+
+    padding: 11px 25px;
+
+    background-color: #6c4ab6;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: 0.4s;
+}
+
+.project-info a:hover {
+    background-color: #e0529c;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 18px rgba(224, 82, 156, 0.3);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    margin-top: 60px;
+
+    padding: 25px;
+
+    background-color: #4b357d;
+
+    color: white;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    main section ul,
+    main section ol {
+        padding-left: 20px;
+    }
+
+    #skills-table table {
+        width: 100%;
+    }
+}
+
+```
